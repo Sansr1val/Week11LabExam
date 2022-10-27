@@ -69,7 +69,7 @@ public class Main {
 			
 			switch (command){
 			case 1:
-				list.Append();
+				Append();
 			break;
 			
 			case 2:
@@ -90,6 +90,22 @@ public class Main {
 			}
 		}
 	}
+	/*
+	 *Asks about the number to be placed at the end of the linked list.
+	 *Then Calls the Append() method of the LinkedList class and passes the 
+	 *number input as its parameter.
+	 *The input is also checked so that integers only are allowed.
+	 */
+	public static void Append(){
+		try {
+			System.out.println("\nAppending a number...");
+			System.out.print("Enter a nuber: ");
+			int num = Integer.parseInt(in.readLine());
+			list.Append(num);
+		}catch(Exception e) {
+			System.out.println("Invalid input! Try again.");
+		}
+	}	
 	
 	/*
 	 * Ask about the similar numbers to be deleted in the list.
@@ -110,19 +126,6 @@ public class Main {
 				System.out.println("Invalid input! Try again.");
 			}
 		}
-	}
-	public static void Append(){
-		try {
-			System.out.println("\nAppending a number...");
-			System.out.print("Enter a nuber: ");
-			int num = Integer.parseInt(in.readLine());
-			list.append(num);
-			}catch(Exception e) {
-			System.out.println("Invalid input!");
-			}
-			
-		}	
-				
 	}
 
 }
