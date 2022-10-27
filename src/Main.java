@@ -66,10 +66,23 @@ public class Main {
 					System.out.println("Invalid input!");
 				}
 			}
+				public static void Append(){
+				try {
+				System.out.println("\nAppending a number...");
+				System.out.print("Enter a nuber: ");
+				int num = Integer.parseInt();
+				list.append(num);
+				}catch(Exception e) {
+					System.out.println("Invalid input!");
+						}
+			
+					}	
+				
+				}
 			
 			switch (command){
 			case 1:
-				Append();
+				list.Append();
 			break;
 			
 			case 2:
