@@ -12,7 +12,7 @@ public class Main {
 		 */
 		while(true) {
 			try {
-				System.out.println("The quantity of numbers to be inserted into the list: ");
+				System.out.print("The quantity of numbers to be inserted into the list: ");
 				quantity = Integer.parseInt(in.readLine());
 				if(quantity<0) {
 					System.out.println("Only integers >= 0 is allowed.");
@@ -48,6 +48,7 @@ public class Main {
 		 *The main menu of the program.
 		 *Calls the methods of the operations selected by the command input of the user.
 		 *Each methods also contains value checking. 
+		 *If an error occurs, the user is returned into the main menu.
 		 */
 		while(true) {
 			System.out.println("\nWhat do you want to do with the list?");
