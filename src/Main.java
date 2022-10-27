@@ -115,7 +115,7 @@ public class Main {
 		try {
 			System.out.println("\nAppending a number...");
 			System.out.print("Enter a nuber: ");
-			int num = Integer.parseInt();
+			int num = Integer.parseInt(in.readLine());
 			list.append(num);
 			}catch(Exception e) {
 			System.out.println("Invalid input!");
