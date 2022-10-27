@@ -98,7 +98,7 @@ public class Main {
 	 * Value checking is also added to only allow integer inputs.
 	 */
 	public static void DeleteAll() {
-		if(list.getHead() == null || list.getTail() == null) {
+		if(list.getHead() == null) {
 			System.out.println("Operation cannot be used since the list is empty.");
 		}else {
 			try {
