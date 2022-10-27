@@ -3,22 +3,24 @@ public class LinkedList {
 	private Node head;
 	private Node tail;
 	
-	public Node getTail() {
+	//setters and getters
+	private Node getTail() {
 		return tail;
 	}
 
-	public void setTail(Node tail) {
+	private void setTail(Node tail) {
 		this.tail = tail;
 	}
 
-	public Node getHead() {
+	private Node getHead() {
 		return head;
 	}
 
-	public void setHead(Node head) {
+	private void setHead(Node head) {
 		this.head = head;
 	}
 	
+	//Adds the new node at the end of the list.
 	public void Append(int data) {
 		Node node = new Node(data);
 		if(head == null) {
@@ -31,19 +33,14 @@ public class LinkedList {
 		}
 	}
 	
-	public void Display() {
-		Node currentNode = head;
-		String str = "";
-		while(currentNode != null) {
-			str += String.valueOf(currentNode.getData()) +", ";
-			currentNode = currentNode.getNext();
-		}
-		if(str !="") {
-			str = str.substring(0,str.length() -2);
-		}
-		System.out.println("The values in the linked list are: "+str);
-	}
 	
+	/*
+	 * Deletes all the integers that is a duplicate of the data input
+	 * Traverses through the list to find the duplicates and unlinks them from the link
+	 * If the head is equal to the data input, we move the head pointer to the next node
+	 * to unlink the previous head node.
+	 * The same goes for the tail node.
+	 */
 	public void DeleteAll(int data) {
 		
 		while(head != null && head.getData() == data) {
@@ -66,5 +63,18 @@ public class LinkedList {
 				currentNode = currentNode.getNext();
 			}
 		}
+	}
+	//Displays the contents of the list
+	public void Display() {
+		Node currentNode = head;
+		String str = "";
+		while(currentNode != null) {
+			str += String.valueOf(currentNode.getData()) +", ";
+			currentNode = currentNode.getNext();
+		}
+		if(str !="") {
+			str = str.substring(0,str.length() -2);
+		}
+		System.out.println("The values in the linked list are: "+str);
 	}
 }
