@@ -69,6 +69,7 @@ public class Main {
 			
 			switch (command){
 			case 1:
+				//calls the Append() method
 				Append();
 			break;
 			
@@ -99,7 +100,7 @@ public class Main {
 	public static void Append(){
 		try {
 			System.out.println("\nAppending a number...");
-			System.out.print("Enter a nuber: ");
+			System.out.print("Enter a number: ");
 			int num = Integer.parseInt(in.readLine());
 			list.Append(num);
 		}catch(Exception e) {
