@@ -34,6 +34,27 @@ public class Main {
 		}
 		System.out.println("The linked list is successfully created!");
 		
+		while(true) {
+			System.out.println("\nWhat do you want to do with the list?");
+			System.out.println("1) Display");
+			System.out.println("2) Append");
+			System.out.println("3) Insert After");
+			System.out.println("4) Insert Before");
+			System.out.println("5) Delete");
+			System.out.println("6) Exit");
+			int command;
+			while(true) {
+				try {
+					System.out.print("\nEnter your Command:");
+					command = Integer.parseInt(in.readLine());
+					break;
+				} catch (Exception e) {
+					System.out.println("Invalid input!");
+				}
+			}
+			
+			switch (command){
+			}
 	}
 
 }
