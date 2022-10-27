@@ -54,10 +54,14 @@ public class Main {
 			}
 			
 			switch (command){
+			case 2:
+				list.Display();
+			break;
+			
 			case 3:
 				DeleteAll();
 			break;
-			
+				
 			case 4:
 				System.out.println("Thank you!");
 				System.exit(0);
@@ -65,6 +69,8 @@ public class Main {
 			}
 		}
 	}
+	
+	
 	public static void DeleteAll() {
 		try {
 			System.out.println("Enter the number to be deleted: ");
