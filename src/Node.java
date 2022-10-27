@@ -5,7 +5,7 @@ public class Node {
 	private Node next;
 	Node previous;
 	
-
+	//Constructors
 	public Node() {
 		this.data = 0;
 		this.next = null;
@@ -18,6 +18,7 @@ public class Node {
 		this.previous = null;
 	}
 
+	//setters and getters.
 	public int getData() {
 		return data;
 	}
