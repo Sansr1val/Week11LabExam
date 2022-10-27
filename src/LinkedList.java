@@ -3,8 +3,8 @@ import java.io.InputStreamReader;
 
 public class Main {
 		static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		static LinkedList list = new LinkedList();
 	public static void main(String[] args) {
-		LinkedList list = new LinkedList();
 		int quantity;
 		while(true) {
 			try {
@@ -54,7 +54,24 @@ public class Main {
 			}
 			
 			switch (command){
+			case 3:
+				DeleteAll();
+			break;
+			
+			case 4:
+				System.out.println("Thank you!");
+				System.exit(0);
+			break;
 			}
+		}
+	}
+	public static void DeleteAll() {
+		try {
+			System.out.println("Enter the number to be deleted: ");
+			int number = Integer.parseInt(in.readLine());
+			list.DeleteAll(number);
+		} catch (Exception e) {
+			System.out.println("Invalid input! Try again.");
 		}
 	}
 
