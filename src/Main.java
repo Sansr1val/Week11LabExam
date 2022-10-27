@@ -6,9 +6,13 @@ public class Main {
 		static LinkedList list = new LinkedList();
 	public static void main(String[] args) {
 		int quantity;
+		/*
+		 * Inquires about the number of nodes/data to be inserted in the list.
+		 * The valid inputs are only integers greater than or equal to 0;
+		 */
 		while(true) {
 			try {
-				System.out.println("The quantity of numbers to be inserted into the list: ");
+				System.out.print("The quantity of numbers to be inserted into the list: ");
 				quantity = Integer.parseInt(in.readLine());
 				if(quantity<0) {
 					System.out.println("Only integers >= 0 is allowed.");
@@ -20,6 +24,12 @@ public class Main {
 			}
 		}
 		
+		/*
+		 * Inserts the numbers into the array.
+		 * It continuously asks the user about then number to be inserted
+		 * until we reached the quantity that the user has assigned.
+		 * Integers only are allowed.
+		 */
 		for(int i =1; i<=quantity; i++) {
 			while(true) {
 				try {
@@ -34,6 +44,12 @@ public class Main {
 		}
 		System.out.println("The linked list is successfully created!");
 		
+		/*
+		 *The main menu of the program.
+		 *Calls the methods of the operations selected by the command input of the user.
+		 *Each methods also contains value checking. 
+		 *If an error occurs, the user is returned into the main menu.
+		 */
 		while(true) {
 			System.out.println("\nWhat do you want to do with the list?");
 			System.out.println("1) Append");
@@ -50,32 +66,24 @@ public class Main {
 					System.out.println("Invalid input!");
 				}
 			}
-			public static void Append(){
-				System.out.println("\nAppending an Integer...");
-				System.out.print("Enter the number to be appended: ");
-				int num = Integer.parseInt(in.readLine)
-				list.append(num);
-				}
-			
-			
 			
 			switch (command){
-		
-				case 1:
+			case 1:
 				Append();
-
-				case 2:
-				list.Display();
-				
-				break;
+			break;
 			
-				case 3:
-	
+			case 2:
+				//Calls the Display() method of the LinkedList Class
+				list.Display();
+			break;
+			
+			case 3:
+				//Calls the DeleteAll() method.
 				DeleteAll();
+			break;
 				
-				break;
-				
-				case 4:
+			case 4:
+				//Exits the program.
 				System.out.println("Thank you!");
 				System.exit(0);
 			break;
@@ -83,15 +91,24 @@ public class Main {
 		}
 	}
 	
-	
+	/*
+	 * Ask about the similar numbers to be deleted in the list.
+	 * Then the DeleteAll() method of the LinkedList class is calls with the number input
+	 * as its parameter.
+	 * Value checking is also added to only allow integer inputs.
+	 */
 	public static void DeleteAll() {
-		try {
-			System.out.println("Enter the number to be deleted: ");
-			int number = Integer.parseInt(in.readLine());
-			list.DeleteAll(number);
-			System.out.println("The numbers has been deleted!");
-		} catch (Exception e) {
-			System.out.println("Invalid input! Try again.");
+		if(list.getHead() == null || list.getTail() == null) {
+			System.out.println("Operation cannot be used since the list is empty.");
+		}else {
+			try {
+				System.out.println("Enter the number to be deleted: ");
+				int number = Integer.parseInt(in.readLine());
+				list.DeleteAll(number);
+				System.out.println("The numbers has been deleted!");
+			} catch (Exception e) {
+				System.out.println("Invalid input! Try again.");
+			}
 		}
 	}
 
