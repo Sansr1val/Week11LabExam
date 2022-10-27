@@ -52,15 +52,24 @@ public class Main {
 			}
 			
 			switch (command){
-			case 2:
+		
+				case 1:
+                   		System.out.print("Enter an integer number to be Appended: ");
+				int value = Integer.parseInt(in.readLine());
+                    		list.append();
+
+				case 2:
 				list.Display();
-			break;
-			
-			case 3:
-				DeleteAll();
-			break;
 				
-			case 4:
+				break;
+			
+				case 3:
+	
+				DeleteAll();
+				
+				break;
+				
+				case 4:
 				System.out.println("Thank you!");
 				System.exit(0);
 			break;
