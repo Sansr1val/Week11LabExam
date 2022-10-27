@@ -55,8 +55,8 @@ public class Main {
 		
 				case 1:
                    		System.out.print("Enter an integer number to be Appended: ");
-				int value = Integer.parseInt(in.readLine());
-                    		list.append();
+				int num = Integer.parseInt(in.readLine());
+                    		num.append();
 
 				case 2:
 				list.Display();
