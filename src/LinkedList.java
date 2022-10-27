@@ -4,7 +4,7 @@ public class LinkedList {
 	private Node tail;
 	
 	//setters and getters
-	private Node getTail() {
+	public Node getTail() {
 		return tail;
 	}
 
@@ -12,7 +12,7 @@ public class LinkedList {
 		this.tail = tail;
 	}
 
-	private Node getHead() {
+	public Node getHead() {
 		return head;
 	}
 
@@ -42,7 +42,6 @@ public class LinkedList {
 	 * The same goes for the tail node.
 	 */
 	public void DeleteAll(int data) {
-		
 		while(head != null && head.getData() == data) {
 			head = head.getNext();
 		}
@@ -63,6 +62,7 @@ public class LinkedList {
 				currentNode = currentNode.getNext();
 			}
 		}
+		
 	}
 	//Displays the contents of the list
 	public void Display() {
