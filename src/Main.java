@@ -74,6 +74,7 @@ public class Main {
 			System.out.println("Enter the number to be deleted: ");
 			int number = Integer.parseInt(in.readLine());
 			list.DeleteAll(number);
+			System.out.println("The numbers has been deleted!");
 		} catch (Exception e) {
 			System.out.println("Invalid input! Try again.");
 		}
